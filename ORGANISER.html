@@ -1,0 +1,204 @@
+<?php
+$server="localhost";
+$user="root";
+$password="";
+$dbname="dailyevents";
+$conn=mysqli_connect($server,$user,$password,$dbname);
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORGANISER portal</title>
+    <link rel="shortcut icon" type="image" href="logo.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="new3.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Black+Ops+One|Kaushan+Script|Monoton|Trade+Winds&display=swap" rel="stylesheet">
+</head>
+<body background="back1.jpg">
+    
+    <h5>CREATE YOUR EVENT</h5>
+
+   <div class="ragis">
+    <form action="" mathod="POST">
+        
+        <input type="text"  name="eveName" placeholder="EVENT NAME...." />
+        <input type="email" name="eveEmail" placeholder="Please enter your Email" />
+        <label for="file-upload" name="evePoster" class="custom-file-upload">
+            <i class="fa fa-cloud-upload" style="color:#71097a"></i> Upload Image
+          </label>
+          <input id="file-upload" name='upload_cont_img' type="file" style="display:none;"/>
+        <textarea name="eveDetails" rows="7" cols="100" id="evcontent"></textarea>
+        <input name="orgName" type="text" placeholder="ORGANISER Name..." id="evorg" />
+        <input name="eveAdd" type="text" placeholder="Enter your address 1" id="evaddress" />
+        <input type="text" name="vevDate" placeholder="Enter your BirthDate" id="evdate"/>
+        
+        
+        <input type="submit" name="submit" id="org" value=""/>
+    </form>
+<?php
+$eveName=$_POST['eveName'];
+$eveEmail=$_POST['eveEmail'];
+$evePoster=$_POST['evePoster'];
+$eveDetails=$_POST['eveDetails'];
+$orgName=$_POST['orgName'];  
+$eveAdd=$_POST['eveAdd'];
+$eveDate=$_POST['eveDate']; 
+
+if($eveName==""){
+ echo '<h4  style="color: rgb(235, 235, 235);
+ position: absolute;
+ font-family: Audiowide;
+ top:-120px;
+ left:50%;
+ transform: translate(-50%,-50%);
+ width:50%;
+ border-radius: 0px 0px 20px 20px;
+ border:3px solid red;
+ box-shadow: 0 0px 10px red;
+ height:5%;
+ line-height:30px;
+ text-align: center;
+ font-size: 15px;
+ text-shadow: 0 0 20px red;">plzz enter Event Name</h4>';         
+}
+elseif($eveEmail==""){
+ echo '<h4  style="color: rgb(235, 235, 235);
+ position: absolute;
+ font-family: Audiowide;
+ top:-120px;
+ left:50%;
+ transform: translate(-50%,-50%);
+ width:50%;
+ border-radius: 0px 0px 20px 20px;
+ border:3px solid red;
+ box-shadow: 0 0px 10px red;
+ height:5%;
+ line-height:30px;
+ text-align: center;
+ font-size: 15px;
+ text-shadow: 0 0 20px red;">plzz enter your Email</h4>';
+}elseif($evePoster=="Upload Image"){
+ echo '<h4  style="color: rgb(235, 235, 235);
+ position: absolute;
+ font-family: Audiowide;
+ top:-120px;
+ left:50%;
+ transform: translate(-50%,-50%);
+ width:50%;
+ border-radius: 0px 0px 20px 20px;
+ border:3px solid red;
+ box-shadow: 0 0px 10px red;
+ height:5%;
+ line-height:30px;
+ text-align: center;
+ font-size: 15px;
+ text-shadow: 0 0 20px red;">plzz select your Event POSTER</h4>';
+}elseif($eveDetails==""){
+ echo '<h4  style="color: rgb(235, 235, 235);
+ position: absolute;
+ font-family: Audiowide;
+ top:-120px;
+ left:50%;
+ transform: translate(-50%,-50%);
+ width:50%;
+ border-radius: 0px 0px 20px 20px;
+ border:3px solid red;
+ box-shadow: 0 0px 10px red;
+ height:5%;
+ line-height:30px;
+ text-align: center;
+ font-size: 15px;
+ text-shadow: 0 0 20px red;">plzz enter something about you event</h4>';
+}elseif($orgName==""){
+    echo '<h4  style="color: rgb(235, 235, 235);
+    position: absolute;
+    font-family: Audiowide;
+    top:-120px;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:50%;
+    border-radius: 0px 0px 20px 20px;
+    border:3px solid red;
+    box-shadow: 0 0px 10px red;
+    height:5%;
+    line-height:30px;
+    text-align: center;
+    font-size: 15px;
+    text-shadow: 0 0 20px red;">plzz enter Organiser Namw</h4>';
+}elseif($eveAdd==""){
+ echo '<h4  style="color: rgb(235, 235, 235);
+ position: absolute;
+ font-family: Audiowide;
+ top:-120px;
+ left:50%;
+ transform: translate(-50%,-50%);
+ width:50%;
+ border-radius: 0px 0px 20px 20px;
+ border:3px solid red;
+ box-shadow: 0 0px 10px red;
+ height:5%;
+ line-height:30px;
+ text-align: center;
+ font-size: 15px;
+ text-shadow: 0 0 20px red;">plzz enter Event Address</h4>';
+}elseif($eveDate==""){
+    echo '<h4  style="color: rgb(235, 235, 235);
+    position: absolute;
+    font-family: Audiowide;
+    top:-120px;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:50%;
+    border-radius: 0px 0px 20px 20px;
+    border:3px solid red;
+    box-shadow: 0 0px 10px red;
+    height:5%;
+    line-height:30px;
+    text-align: center;
+    font-size: 15px;
+    text-shadow: 0 0 20px red;">plzz enter Event Date</h4>';
+}
+else{
+ $query="INSERT INTO events VALUES('$eveName','$eveEmail','$evePoster','$eveDetails','$orgName','$eveAdd','$eveDate')";
+
+ $data=mysqli_query($conn,$query,$lquery);
+ if($data){
+  echo '<h4  style="color: rgb(235, 235, 235);
+  position: absolute;
+  font-family: Audiowide;
+  top:-120px;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width:50%;
+  border-radius: 0px 0px 20px 20px;
+  border:3px solid #00ff00;
+  box-shadow: 0 0px 10px #00ff00;
+  height:5%;
+  line-height:30px;
+  text-align: center;
+  font-size: 15px;
+  text-shadow: 0 0 20px #00ff00;">Registration Complete</h4>';
+ }
+
+}
+?>
+
+   </div>
+   <script>
+       $('#file-upload').change(function() {
+  var i = $(this).prev('label').clone();
+  var file = $('#file-upload')[0].files[0].name;
+  $(this).prev('label').text(file);
+});
+
+   </script>
+    
+   
+</body>
+    
+
+</html>

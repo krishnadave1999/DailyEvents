@@ -1,0 +1,200 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: #333;
+}
+.cant{
+    position: absolute;
+    top: 11%;
+    height: 78%;   
+    width: 100%;
+    box-sizing: border-box;   
+}
+.cant .ragister{
+    position: absolute;
+     display: block;
+  
+    padding: 20px;
+    height: 100%;
+    background: #230249;
+    border: 3px solid rgb(25, 3, 226);
+    width: 100%;
+    
+    box-shadow: 0 5px 10px #000;
+    box-sizing: border-box;   
+}
+.cant .login{
+    position: absolute;
+    display: block;
+    right: 100%;;
+    padding: 20px;
+    height: 100%;
+    background: #230249;
+    border: 3px solid rgb(25, 3, 226);
+    width: 100%;
+    box-shadow: 0 5px 10px #000;
+    box-sizing: border-box;   
+    transition: 0.7s;
+}
+.cant .log{
+    position: absolute;
+    display: block;
+   right:0%;
+    padding: 20px;
+    height: 100%;
+    background: #230249;
+    border: 3px solid rgb(25, 3, 226);
+    width: 100%;
+    box-shadow: 0 5px 10px #000;
+    box-sizing: border-box;   
+    transition: 0.7s;
+}
+h1{ 
+    position: relative;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    font-family: 'EDO SZ';
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    padding: 0;
+    margin: 40 0px;
+}
+p{
+    position: relative;
+    font-size: 20px;
+    font-family: 'EDO SZ';
+    color: #fff;
+    
+    padding: 0;
+    margin-bottom:3px;
+    
+}
+input[type="number"],input[type="text"],input[type="password"]{
+    position: relative;
+    display: flex;
+    margin: 5px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    width: 500px;
+    font-family: 'EDO SZ';
+    padding: 5px;
+    border:transparent;
+    border-bottom: 3px solid #000;
+    background: transparent;
+    outline:none;
+    font-size: 20px;
+    color:#fff;
+    
+}
+#fname{
+    left: 40%;
+    width: 240px;
+    
+    position: absolute;
+}
+#num{
+    margin: 20px 0;
+}
+#lname{
+    top:4px;
+    left: 60%;
+    width: 240px;
+    position: relative;
+}
+#uname{
+    margin:20px 0px;
+}
+#pass{
+    left: 40%;
+    width: 240px;
+    position: absolute;
+}
+#cpass{
+    left: 60%;
+    width: 240px;
+    position: absolute;
+}
+input[type="submit"]{
+    position: absolute;
+    background: transparent;
+    color: #fff;
+    font-family: 'EDO SZ';
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    width: 18%;
+    border-radius: 50px;
+    border: 2px solid #0fa;
+    left: 31%;
+    padding: 4px;
+    justify-content: center;
+    bottom: 10px;
+    box-shadow: 0 0 10px #000;
+    transition: 0.7s;
+}
+input[type="button"]{
+    background: transparent;
+    color: #fff;
+    padding: 4px;
+    bottom: 10px;
+    font-family: 'EDO SZ';
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px #000;
+    width: 18%;
+    border-radius: 50px;
+    border: 2px solid #0fa;
+    left: 52%;
+    justify-content: center;
+    position: absolute;
+    transition: 0.7s;
+}
+button{
+    background: transparent;
+    color: #fff;
+    padding: 15px;
+    bottom: 100px;
+    font-family: 'EDO SZ';
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px #000;
+    width:20%;
+    border-radius: 50px;
+    border: 2px solid #0fa;
+    justify-content: center;
+    position: absolute;
+    left: 40%;
+    transform: translate(-50%,-50%);
+    transition: 0.7s;
+}
+#log{
+    top: 80%;
+    height: 60px;
+    transform: translate(-50%,-50%);
+   left:40%;
+}
+#close{
+    top: 80%;
+    height: 60px;
+    transform: translate(-50%,-50%);
+   border: 2px solid #f00;
+   left:60%;
+}
+#close:hover{
+    background: #f00;
+}
+input[type="submit"]:hover{
+    color: #fff;
+    background: #0fa;
+}
+input[type="button"]:hover{
+    color: #fff;
+    background: #0fa;
+}
+button:hover{
+    color: #fff;
+    background: #0fa;
+}

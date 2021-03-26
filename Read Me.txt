@@ -1,0 +1,97 @@
+
+
+<------------------------------------------>
+Create a new data base
+<------------------------------------------>
+
+
+1. install xampp.
+after install xampp:
+  first of all you have to coopy this folder(DAILY EVENTS) and save at this following path:
+
+     C:\xampp\htdocs
+
+2. open xampp control.
+3. Start first three option.
+   Then click on admin button of PhpMyAdmin
+4. create a new database which is the name is "dailyevents";
+5. then click on SQL button.
+
+1
+<----------------------------------------->
+
+CREATE TABLE `applyes` (
+ `eveName` varchar(200) NOT NULL,
+ `appName` varchar(200) NOT NULL,
+ `appEmail` varchar(200) NOT NULL,
+ `appDP` varchar(200) NOT NULL,
+ `appNum` varchar(12) NOT NULL,
+ `appGender` varchar(1) NOT NULL,
+ `appInsta` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+
+<------------------------------------------>
+2
+<----------------------------------------->
+
+CREATE TABLE `events` (
+ `eveName` varchar(50) NOT NULL,
+ `eveEmail` varchar(50) NOT NULL,
+ `evePoster` varchar(200) NOT NULL,
+ `eveDetails` varchar(500) NOT NULL,
+ `orgName` varchar(50) NOT NULL,
+ `eveAdd` varchar(100) NOT NULL,
+ `eveDate` varchar(10) NOT NULL,
+ UNIQUE KEY `eveEmail` (`eveName`,`eveEmail`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 
+
+<------------------------------------------>
+3
+<----------------------------------------->
+
+CREATE TABLE `orgdata` (
+ `orgName` varchar(50) NOT NULL,
+ `orgCom` varchar(50) NOT NULL,
+ `orgEmail` varchar(30) NOT NULL,
+ `orgDP` varchar(500) NOT NULL DEFAULT 'orgDP/user.png',
+ `orgNum` varchar(12) NOT NULL,
+ `orgAdd1` varchar(50) NOT NULL,
+ `orgAdd2` varchar(50) NOT NULL,
+ `orgDOB` varchar(11) NOT NULL,
+ `orgGender` varchar(6) NOT NULL,
+ `orgPass` varchar(30) NOT NULL,
+ `orgInsta` varchar(100) NOT NULL,
+ UNIQUE KEY `orgEmail` (`orgEmail`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+<------------------------------------------>
+
+
+6. Then run these SQL commends one by one.
+
+
+7. After complite this.
+
+8. Open a new Tab in your browser and do copy and paste this link(http://localhost/DAILY%20EVENTS/new.php) in your Browser seacher Bar. 
+
+
+9. I hope Your Site will be open.
+
+if(9){
+
+1. click on "LOG-IN ORGANISER" then click on create yor account.
+2. Fill this form and Submit it.
+3. Go back and login your ID with you Email and And Password.
+4. after login Go on Create Event and Create your event.
+5. then Logout.
+
+
+now you event will be created.
+
+1. now click on APPLY NOW and submit this form.
+2. After this login your id and click on Feeds and see your events which is you create.
+3. Also can see who who can apply in your event with click on "SHOW RECOREDS".
+4. You also can delete you event with click on "DELETE EVENT";
+
+
+}
